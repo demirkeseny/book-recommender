@@ -58,75 +58,77 @@ Although this dataset is extensive, we are still lacking some content informatio
 
 For this project I have built three models:
 
-1. Collaborative Filtering - Item Based:
+### Collaborative Filtering - Item Based
 
-   In item based collaborative filtering, I used the user ratings for each book and then calculated the similar books. The user is able to input a book name and the recommendation engine generates similar kind of books based on user ratings. 
+In item based collaborative filtering, I used the user ratings for each book and then calculated the similar books. The user is able to input a book name and the recommendation engine generates similar kind of books based on user ratings. 
 
-   
 
-   For instance when *Lost Symbol* by *Dan Brown* is entered to the model, the model generates the following ten recommendations:
 
-   
+For instance when *Lost Symbol* by *Dan Brown* is entered to the model, the model generates the following ten recommendations:
 
-   | Similarity Index | Book Name                             |
-   | ---------------- | ------------------------------------- |
-   | 1                | Digital Fortress                      |
-   | 2                | Deception Point                       |
-   | 3                | Inferno                               |
-   | 4                | The Girl who Kicked the Hornet's Nest |
-   | 5                | Eclipse                               |
-   | 6                | The Runaway Jury                      |
-   | 7                | A Dance with Dragons                  |
-   | 8                | New Moon                              |
-   | 9                | Breaking Dawn                         |
-   | 10               | The Da Vinci Code                     |
 
-   
 
-2. Collaborative Filtering - User Based
+| Similarity Index | Book Name                             |
+| ---------------- | ------------------------------------- |
+| 1                | Digital Fortress                      |
+| 2                | Deception Point                       |
+| 3                | Inferno                               |
+| 4                | The Girl who Kicked the Hornet's Nest |
+| 5                | Eclipse                               |
+| 6                | The Runaway Jury                      |
+| 7                | A Dance with Dragons                  |
+| 8                | New Moon                              |
+| 9                | Breaking Dawn                         |
+| 10               | The Da Vinci Code                     |
 
-   For the user based collaborative filtering I used the module called [Surprise](http://surpriselib.com/). This was a very useful module to generate recommendations in a faster way. After running multiple algorithms, I ended up with SVD as the most optimal solution. SVDpp had a better test score but decided to pick SVD since it runs almost eight times faster than SVDpp.
 
-   
 
-   For the user `12874`, we can see the recommendations as below:
+### Collaborative Filtering - User Based
 
-   
+For the user based collaborative filtering I used the module called [Surprise](http://surpriselib.com/). This was a very useful module to generate recommendations in a faster way. After running multiple algorithms, I ended up with SVD as the most optimal solution. SVDpp had a better test score but decided to pick SVD since it runs almost eight times faster than SVDpp.
 
-   | Similarity Index | Book Name                               | Actual Rating | Estimated Rating |
-   | ---------------- | --------------------------------------- | ------------- | ---------------- |
-   | 1                | The Return of the King                  | 4.0           | 4.0              |
-   | 3                | The Giving Tree                         | 4.0           | 3.9              |
-   | 4                | The Hobbit Bookset                      | 4.0           | 3.9              |
-   | 2                | A Light in the Attic                    | 4.0           | 3.9              |
-   | 5                | Roots: The Saga of an American Family   | 4.0           | 3.9              |
-   | 6                | Green Eggs and Ham                      | 4.0           | 3.8              |
-   | 7                | Philosopher's Stone                     | 4.0           | 3.8              |
-   | 8                | The Art of Racing in the Rain           | 4.0           | 3.8              |
-   | 9                | A Wrinkle in a Time                     | 4.0           | 3.7              |
-   | 10               | Hotel on the Corner of Bitter and Sweet | 4.0           | 3.7              |
 
-3. Content-Based Recommendation
 
-   On content based recommendations, I used the book descriptions. The similarities between all is measured by Count Vectorizer. More frequent a group of words is, higher the similarity gets between books.
+For the user `12874`, we can see the recommendations as below:
 
-    
 
-   In order to test that I searched for the book *Treasure Island*:
 
-   | Similarity Index | Book Name                         |
-   | ---------------- | --------------------------------- |
-   | 1                | Treasure Island (Famous Five, #1) |
-   | 3                | The Black Arrow                   |
-   | 4                | The Count of Monte Cristo         |
-   | 2                | The Dark is Rising Sequence       |
-   | 5                | The Complete Sherlock Holmes      |
-   | 6                | The Thief                         |
-   | 7                | Low Country                       |
-   | 8                | The Reed                          |
-   | 9                | Inca Gold                         |
+| Similarity Index | Book Name                               | Actual Rating | Estimated Rating |
+| ---------------- | --------------------------------------- | ------------- | ---------------- |
+| 1                | The Return of the King                  | 4.0           | 4.0              |
+| 3                | The Giving Tree                         | 4.0           | 3.9              |
+| 4                | The Hobbit Bookset                      | 4.0           | 3.9              |
+| 2                | A Light in the Attic                    | 4.0           | 3.9              |
+| 5                | Roots: The Saga of an American Family   | 4.0           | 3.9              |
+| 6                | Green Eggs and Ham                      | 4.0           | 3.8              |
+| 7                | Philosopher's Stone                     | 4.0           | 3.8              |
+| 8                | The Art of Racing in the Rain           | 4.0           | 3.8              |
+| 9                | A Wrinkle in a Time                     | 4.0           | 3.7              |
+| 10               | Hotel on the Corner of Bitter and Sweet | 4.0           | 3.7              |
 
-   From the table it is possible to say that we have a similar genre or content selection as *Treasure Island* but for instance the first recommendation is a completely different type of book, genre and author but since the name of the books are similar, it is very misleading. 
+
+
+### Content-Based Recommendation
+
+On content based recommendations, I used the book descriptions. The similarities between all is measured by Count Vectorizer. More frequent a group of words is, higher the similarity gets between books.
+
+ 
+
+In order to test that I searched for the book *Treasure Island*:
+
+| Similarity Index | Book Name                         |
+| ---------------- | --------------------------------- |
+| 1                | Treasure Island (Famous Five, #1) |
+| 3                | The Black Arrow                   |
+| 4                | The Count of Monte Cristo         |
+| 2                | The Dark is Rising Sequence       |
+| 5                | The Complete Sherlock Holmes      |
+| 6                | The Thief                         |
+| 7                | Low Country                       |
+| 8                | The Reed                          |
+| 9                | Inca Gold                         |
+
+From the table it is possible to say that we have a similar genre or content selection as *Treasure Island* but for instance the first recommendation is a completely different type of book, genre and author but since the name of the books are similar, it is very misleading. 
 
 
 
@@ -136,9 +138,15 @@ Only for user based collaborative filtering, evaluation makes more sense since w
 
 ![title](https://github.com/demirkeseny/book-recommender/blob/master/images/act_vs_pred.PNG)
 
+In the above graph we can see what we predicted using SVD vs what is the actual rating of our target user for each book.
+
 ## Future Developments
 
+This project has a big potential to grow since recommendation engines can always be more accurate but in specific there are couple of steps I might perform in the future to take this project to the next level:
 
+- There might be an hybrid model that combines my three models. 
+- The number of books and users can be extended. In order to do that, I need to scrape goodreads with my own scraper which is more complicated.
+- If all the books can be loaded to the NLP model as PDF files, it could make more sense to run the Count Vectorizer.
 
 
 
