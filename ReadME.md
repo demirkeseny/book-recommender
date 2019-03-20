@@ -15,7 +15,6 @@ If you are a book worm, you might spend more time deciding what to read next tha
 <img src="C:\Users\demir\OneDrive\GA\DSI_6\Projects\book-recommender\images\t1.PNG" width="400px">
 
 
-
 ## Objective
 
 The goal of this project is to build a recommendation engine that can suggest next books based on user ratings or similarity in the book descriptions. For that purpose, I built different models that can create a recommendation on user-based, item-based and content-based.
