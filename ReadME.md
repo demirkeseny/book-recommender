@@ -32,7 +32,7 @@ In the collaborative filtering we need to have a good amount of user ratings. Th
 
 From this point, we can measure the similarity between the users by **cosine similarity**. The less cosine similarity is, more similar two users get. After we label similar users, we can predict how one of those similar users will vote a certain book. 
 
-![title](C:\Users\demir\OneDrive\GA\DSI_6\Projects\book-recommender\images\CF.PNG)
+![title](https://github.com/demirkeseny/book-recommender/blob/master/images/CF.PNG)
 
 
 
