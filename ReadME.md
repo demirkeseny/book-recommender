@@ -12,7 +12,7 @@
 
 If you are a book worm, you might spend more time deciding what to read next than reading the book itself. In social media, there are lots of sources that recommend us what to read next. These are usually based on other users' preferences or the average rating of the books. This is a nice approach for mainstream books but if we want to have a more personalized recommendation, we might approach this from another perspective. Maybe my recommendation engine can do the task of *Recommending Your Next Book*!  
 
-<img src="https://github.com/demirkeseny/book-recommender/blob/master/images/t1.PNG" width="48">
+<img src="https://github.com/demirkeseny/book-recommender/blob/master/images/t1.PNG" width="348">
 
 
 ## Objective
