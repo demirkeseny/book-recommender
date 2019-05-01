@@ -1,4 +1,4 @@
-# Recommending Your Next Book
+# Recommending Your Next Book 
 
 > Author: Yalim Demirkesen | [github.com/demirkeseny](github.com/demirkeseny)
 >
